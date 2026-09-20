@@ -28,7 +28,7 @@ HF_api_key=st.sidebar.text_input('enter your HuggingFace API key',type="password
 GQ_api_key = st.sidebar.text_input("Enter your Groq API key:", type="password")
 
 if GQ_api_key and HF_api_key:
-    llm = ChatGroq(groq_api_key=GQ_api_key, model_name="Gemma2-9b-It")
+    llm = ChatGroq(groq_api_key=GQ_api_key, model_name="openai/gpt-oss-20b")
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
     # Chat interface
